@@ -30,6 +30,7 @@
 function IsContinuous(array $numbers)
 {
     // write code here
+    if (count($numbers) == 0 || is_null($numbers)) return false;
     sort($numbers);
     $arrTemp = array_count_values($numbers);
     $zero_count = $arrTemp['0'];
@@ -46,4 +47,4 @@ function IsContinuous(array $numbers)
     return $needNum <= $zero_count ? true : false;
 }
 
-var_dump(IsContinuous([3,5,6,0,0]));
+var_dump(IsContinuous([]));
