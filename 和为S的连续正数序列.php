@@ -17,7 +17,7 @@ function FindContinuousSequence($sum)
     if ($sum < 3) return;
     $small = 1;
     $big = 2;
-    $mid = ($sum + 1)/2;
+    $mid = ($sum + 1)/2;//为了确保序列中的数字超过两个
     $curSum = $small + $big;
     while($small < $mid) {
         if ($curSum == $sum) {
